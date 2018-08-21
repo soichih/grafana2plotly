@@ -1,0 +1,24 @@
+{
+  "name": "grafana2plotly",
+  "version": "1.0.0",
+  "description": "Convert grafana csv output to plotly.js so that you can customize the graph to death. plotly also allows svg export!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soichih/grafana2plotly.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soichih/grafana2plotly/issues"
+  },
+  "homepage": "https://github.com/soichih/grafana2plotly#readme",
+  "dependencies": {
+    "commander": "^2.17.1",
+    "plotly": "^1.0.6"
+  }
+}

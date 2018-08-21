@@ -1,0 +1,28 @@
+<html>
+<head>
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <script src="graph.js" style="width: 100%; height: 100%"></script>
+    <div id="plot"/>
+
+<script>
+    Plotly.newPlot('plot', data, {
+        width: window.innerWidth,
+        height: window.innerHeight,
+    }, {
+  modeBarButtonsToRemove: ['toImage', 'sendDataToCloud'],
+  modeBarButtonsToAdd: [{
+    name: 'toImage2',
+    icon: Plotly.Icons.camera,
+    click: function(gd) {
+      Plotly.downloadImage(gd, {format: 'svg'})
+    }
+  }]
+    });
+
+</script>
+
+</body>
+</html>
