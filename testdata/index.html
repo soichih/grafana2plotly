@@ -1,0 +1,72 @@
+<html>
+<head>
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<style>
+body {
+margin: 0px;
+}
+h1 {
+color: gray;
+font-family: Arial;
+margin-left: 20px;
+}
+</style>
+</head>
+<body>
+    <script src="0001-full-carb.csv.js"></script>
+    <script src="0001-full-mix2.csv.js"></script>
+    <script src="0001-full-run1.csv.js"></script>
+    <script src="0001-full-run2.csv.js"></script>
+    <script src="0001-outage.csv.js"></script>
+    <script src="0005-full-mix2.csv.js"></script>
+    <script src="0009-full-mix2.csv.js"></script>
+
+    <h1>Carb 0001</h1>
+    <div id="carb_0001"/>
+    <h1>Mix1 0001 Run1</h1>
+    <div id="mix1_0001_run1"/>
+    <h1>Mix1 0001 Run2</h1>
+    <div id="mix1_0001_run2"/>
+    <h1>Mix1 0001 Outage</h1>
+    <div id="mix1_0001_out"/>
+
+    <h1>Mix2 0001</h1>
+    <div id="mix2_0001"/>
+    <h1>Mix2 0005</h1>
+    <div id="mix2_0005"/>
+    <h1>Mix2 0009</h1>
+    <div id="mix2_0009"/>
+
+<script>
+let opts = {
+    modeBarButtonsToRemove: ['toImage', 'sendDataToCloud'],
+    modeBarButtonsToAdd: [{
+        name: 'SVG Export',
+        icon: Plotly.Icons.camera,
+        click: function(gd) {
+            Plotly.downloadImage(gd, {format: 'svg'})
+        }
+    }]
+}
+let layout = {
+    width: 1200,
+    height: 500, 
+    yaxis: {
+        type: "log",
+        autorange: true,
+    }
+}
+
+Plotly.newPlot('carb_0001', carb_0001, layout, opts);
+Plotly.newPlot('mix1_0001_run1', mix1_0001_run1, layout, opts);
+Plotly.newPlot('mix1_0001_run2', mix1_0001_run2, layout, opts);
+Plotly.newPlot('mix1_0001_out', mix1_0001_out, layout, opts);
+Plotly.newPlot('mix2_0001', mix2_0001, layout, opts);
+Plotly.newPlot('mix2_0005', mix2_0005, layout, opts);
+Plotly.newPlot('mix2_0009', mix2_0009, layout, opts);
+
+</script>
+
+</body>
+</html>
